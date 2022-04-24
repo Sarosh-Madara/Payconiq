@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Payconiq</string>
+    <string name="image_placeholder">Image Placeholder</string>
+    <string name="empty_data">No results found for this query</string>
+    <string name="reload">Reload</string>
+    <string name="unable_load">Unable to load images</string>
 </resources>

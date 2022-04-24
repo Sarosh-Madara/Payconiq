@@ -1,6 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -23,6 +27,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -30,6 +39,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    kapt {
+        correctErrorTypes = true
+    }
+    kapt.includeCompileClasspath = false
+
 }
 
 dependencies {
@@ -39,5 +53,55 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$versions.androidx.appCompatVersion"
     implementation "com.google.android.material:material:$versions.google.material"
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation "androidx.navigation:navigation-fragment-ktx:$versions.androidx.navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$versions.androidx.navigationVersion"
+    implementation "androidx.paging:paging-runtime-ktx:$versions.androidx.pagingVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$versions.androidx.viewmodelktx"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.androidx.viewmodelktx"
+    implementation("androidx.lifecycle:lifecycle-runtime:$versions.androidx.viewmodelktx")
+    implementation 'androidx.activity:activity-ktx:1.3.1'
 
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$versions.retrofit2.retrofit"
+    //GSON
+    implementation "com.squareup.retrofit2:converter-gson:$versions.retrofit2.retrofit"
+
+    //Retrofit interceptor Logging
+    implementation "com.squareup.okhttp3:logging-interceptor:$versions.retrofit2.retrofitInterceptor"
+
+    // Dagger Hilt
+    implementation "com.google.dagger:hilt-android:$versions.google.hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$versions.google.hiltVersion"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$versions.androidx.hiltAndroidXVersion"
+//    kapt "androidx.hilt:hilt-compiler:$versions.androidx.hiltAndroidXVersion"
+    implementation 'com.google.dagger:dagger:2.28'
+    kapt 'com.google.dagger:dagger-compiler:2.28'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha01'
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$versions.github.glideVersion"
+    implementation "com.github.bumptech.glide:okhttp3-integration:$versions.github.glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$versions.github.glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$versions.github.glideVersion"
+
+    //Shimmer Loader
+    implementation "com.facebook.shimmer:shimmer:$versions.facebook.shimmerVersion"
+
+    //Card View
+    implementation "androidx.cardview:cardview:$versions.androidx.cardview"
+
+
+    // mock api test
+    testImplementation "com.squareup.okhttp3:mockwebserver:$versions.squareup.mockwebserver"
+
+    //Mockito
+    testImplementation "org.mockito:mockito-core:$versions.mockito.mockitCore"
+    testImplementation "androidx.arch.core:core-testing:$versions.androidx.coreTesting"
+    testImplementation "org.mockito:mockito-inline:$versions.mockito.mockitoInline"
+    testImplementation "org.json:json:${json}"
+
+    // Test Dependencies
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.jetbrains.coroutinesTest"
+    testImplementation "com.google.truth:truth:$versions.google.truth"
 }

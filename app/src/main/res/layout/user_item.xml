@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/userItems"
+        android:layout_margin="2dp"
+        android:layout_height="180dp">
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image_placeholder"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/transparent_black"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/txtTags"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:singleLine="true"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                tools:text="tags"
+                android:textStyle="bold"
+                android:drawablePadding="6dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#FFFFFF"
+                app:drawableStartCompat="@drawable/tag" />
+
+            <TextView
+                android:id="@+id/txtType"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:singleLine="true"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                tools:text="type"
+                android:textStyle="bold"
+                android:drawablePadding="6dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#FFFFFF"
+                app:drawableStartCompat="@drawable/delta" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>
