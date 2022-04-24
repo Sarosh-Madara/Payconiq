@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.payconiq.app">
+
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application>
+        <activity
+            android:name=".GithubTestActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

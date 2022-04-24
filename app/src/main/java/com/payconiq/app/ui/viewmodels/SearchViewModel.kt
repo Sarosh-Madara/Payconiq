@@ -13,7 +13,6 @@ import androidx.paging.cachedIn
 import androidx.paging.liveData
 import com.payconiq.app.data.SearchPagingSource
 import com.payconiq.app.data.repository.DataRepository
-import com.payconiq.app.data.repository.GithubRepository
 import com.payconiq.app.globals.DEFAULT_QUERY_STRING
 import com.payconiq.app.globals.DEFAULT_STRING
 import com.payconiq.app.globals.PER_PAGE

@@ -3,7 +3,6 @@ package com.payconiq.app.data
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.payconiq.app.data.repository.DataRepository
-import com.payconiq.app.data.repository.GithubRepository
 import com.payconiq.app.globals.PER_PAGE
 import com.payconiq.app.globals.STARTING_PAGE_INDEX
 import com.payconiq.app.models.GithubSearchModel

@@ -20,13 +20,19 @@ buildscript {
                         pagingVersion           : '3.1.1',
                         viewmodelktx            : '2.4.1',
                         cardview                : '1.0.0',
-                        coreTesting             : '2.1.0'
+                        coreTesting             : '2.1.0',
+                        testCore                : '1.2.0',
+                        espressoContrib         : '3.4.0',
+                        espressoCore            : '3.2.0',
+                        fragmentTesting         : '1.3.0-alpha08',
+                        extJunit                : '1.1.3'
                 ],
                 google      : [
                         material                : '1.5.0',
                         hiltVersion             : '2.38.1',
                         hiltAndroidCompiler     : '2.28-alpha',
-                        truth                   : '1.0.1'
+                        truth                   : '1.0.1',
+                        hiltAndroidTesting      : '2.28-alpha'
                 ],
                 retrofit2    : [
                         retrofit                : '2.9.0',
@@ -49,6 +55,9 @@ buildscript {
                 mockito     : [
                         mockitCore              : '3.3.3',
                         mockitoInline           : '3.2.0'
+                ],
+                linkedin    : [
+                        dexmakerMockito         : '2.12.1'
                 ]
         ]
         ext.kotlinVersion       = "1.6.0"
@@ -57,6 +66,11 @@ buildscript {
         ext.versionMinor        = '0'
         ext.versionPatch        = '0'
         ext.json                = '20201115'
+        ext.jUnit               = '4.13.2'
+        ext.hamcrestAll         = '1.3'
+        ext.robolectric         = '4.3.1'
+        ext.mockkAndroid         = '1.9.3'
+        ext.testMonitor='1.4.0'
     }
     repositories {
         google()

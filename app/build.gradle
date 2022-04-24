@@ -21,6 +21,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -72,6 +76,7 @@ dependencies {
 
     // Dagger Hilt
     implementation "com.google.dagger:hilt-android:$versions.google.hiltVersion"
+    implementation 'androidx.test:runner:1.4.0'
     kapt "com.google.dagger:hilt-android-compiler:$versions.google.hiltVersion"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$versions.androidx.hiltAndroidXVersion"
 //    kapt "androidx.hilt:hilt-compiler:$versions.androidx.hiltAndroidXVersion"
@@ -91,9 +96,9 @@ dependencies {
     //Card View
     implementation "androidx.cardview:cardview:$versions.androidx.cardview"
 
+    androidTestImplementation "io.mockk:mockk-android:${mockkAndroid}"
+    implementation "androidx.test:monitor:${testMonitor}"
 
-    // mock api test
-    testImplementation "com.squareup.okhttp3:mockwebserver:$versions.squareup.mockwebserver"
 
     //Mockito
     testImplementation "org.mockito:mockito-core:$versions.mockito.mockitCore"
@@ -101,7 +106,29 @@ dependencies {
     testImplementation "org.mockito:mockito-inline:$versions.mockito.mockitoInline"
     testImplementation "org.json:json:${json}"
 
+
+    // mock api test
+    testImplementation "com.squareup.okhttp3:mockwebserver:$versions.squareup.mockwebserver"
     // Test Dependencies
+
+    implementation "androidx.test:core:$versions.androidx.testCore"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$versions.androidx.espressoContrib"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.androidx.espressoCore"
+    kaptAndroidTest     "com.google.dagger:hilt-android-compiler:$versions.google.hiltAndroidCompiler"
+    debugImplementation "androidx.fragment:fragment-testing:$versions.androidx.fragmentTesting"
+    testImplementation "junit:junit:${jUnit}"
+    //    androidTestImplementation "junit:junit:${jUnit}"
+    androidTestImplementation "androidx.test.ext:junit:$versions.androidx.extJunit"
+    testImplementation "org.hamcrest:hamcrest-all:${hamcrestAll}"
+    testImplementation "org.robolectric:robolectric:${robolectric}"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.jetbrains.coroutinesTest"
     testImplementation "com.google.truth:truth:$versions.google.truth"
+
+    androidTestImplementation "com.google.truth:truth:$versions.google.truth"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.jetbrains.coroutinesTest"
+    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:$versions.linkedin.dexmakerMockito"
+    androidTestImplementation "org.mockito:mockito-core:$versions.mockito.mockitCore"
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$versions.google.hiltAndroidTesting"
+    androidTestImplementation "androidx.arch.core:core-testing:$versions.androidx.coreTesting"
+
 }
