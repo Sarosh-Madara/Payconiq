@@ -8,6 +8,7 @@ import com.payconiq.app.globals.DEFAULT_INT_VALUE
 import com.payconiq.app.globals.DEFAULT_STRING
 import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class GithubSearchModel(
         @SerializedName("avatar_url")
         val avatarUrl: String? = DEFAULT_STRING,
@@ -47,4 +48,4 @@ data class GithubSearchModel(
         val type: String? = DEFAULT_STRING,
         @SerializedName("url")
         val url: String? = DEFAULT_STRING
-)
+) : Parcelable

@@ -7,7 +7,7 @@
     <application>
         <activity
             android:name=".GithubTestActivity"
-            android:exported="true" />
+            android:exported="false" />
     </application>
 
 </manifest>

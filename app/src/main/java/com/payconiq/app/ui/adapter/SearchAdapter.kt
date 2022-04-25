@@ -11,7 +11,7 @@ import com.payconiq.app.R
 import com.payconiq.app.databinding.UserItemBinding
 import com.payconiq.app.models.GithubSearchModel
 
-class SearchAdapter() : PagingDataAdapter<GithubSearchModel, SearchAdapter.UserViewHolder>(USER_COMPARATOR) {
+class SearchAdapter(private val onItemClickListener: OnItemClickListener) : PagingDataAdapter<GithubSearchModel, SearchAdapter.UserViewHolder>(USER_COMPARATOR) {
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val currentItem = getItem(position)
@@ -27,6 +27,17 @@ class SearchAdapter() : PagingDataAdapter<GithubSearchModel, SearchAdapter.UserV
 
     inner class UserViewHolder(private val binding: UserItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
+
+        init {
+            binding.root.setOnClickListener {
+                val position = bindingAdapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val item = getItem(position)
+                    if (item != null)
+                        onItemClickListener.onItemClick(item)
+                }
+            }
+        }
 
         fun bind(item: GithubSearchModel) {
 
@@ -44,6 +55,11 @@ class SearchAdapter() : PagingDataAdapter<GithubSearchModel, SearchAdapter.UserV
                 binding.txtType.text = item.type
             }
         }
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(user: GithubSearchModel)
+
     }
 
     companion object {

@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Payconiq/app/src/main/res/layout/fragment_search.xml" value="0.1" />
+        <entry key="..\:/Payconiq/app/src/main/res/layout/fragment_user_details.xml" value="0.22" />
+        <entry key="..\:/Payconiq/app/src/main/res/layout/user_item.xml" value="0.1" />
       </map>
     </option>
   </component>

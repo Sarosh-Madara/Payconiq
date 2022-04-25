@@ -9,4 +9,14 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent_black">#33000000</color>
     <color name="colorGrey">#dddddd</color>
+
+    <!-- Google Colors -->
+    <color name="googleBlue">#176BEF</color>
+    <color name="googleRed">#FF3E30</color>
+    <color name="googleYellow">#F7B529</color>
+    <color name="googleGreen">#179C52</color>
+
+    <color name="grayLight">#BEBEBE</color>
+    <color name="startBlue">#2F4F4F</color>
+    <color name="endBlue">#32CD32</color>
 </resources>

@@ -22,17 +22,21 @@ buildscript {
                         cardview                : '1.0.0',
                         coreTesting             : '2.1.0',
                         testCore                : '1.2.0',
-                        espressoContrib         : '3.4.0',
+                        espressoContrib         : '3.3.0',
                         espressoCore            : '3.2.0',
                         fragmentTesting         : '1.3.0-alpha08',
-                        extJunit                : '1.1.3'
+                        extJunit                : '1.1.3',
+                        testRunner              : '1.4.0',
+                        legacySupport           : '1.0.0',
+                        activityKtx             : '1.3.1'
                 ],
                 google      : [
                         material                : '1.5.0',
                         hiltVersion             : '2.38.1',
                         hiltAndroidCompiler     : '2.28-alpha',
                         truth                   : '1.0.1',
-                        hiltAndroidTesting      : '2.28-alpha'
+                        hiltAndroidTesting      : '2.28-alpha',
+                        daggerVersion           : '2.28'
                 ],
                 retrofit2    : [
                         retrofit                : '2.9.0',
@@ -69,8 +73,9 @@ buildscript {
         ext.jUnit               = '4.13.2'
         ext.hamcrestAll         = '1.3'
         ext.robolectric         = '4.3.1'
-        ext.mockkAndroid         = '1.9.3'
-        ext.testMonitor='1.4.0'
+        ext.mockkAndroid        = '1.9.3'
+        ext.testMonitor         ='1.4.0'
+        ext.constraintlayout    ='2.1.3'
     }
     repositories {
         google()
