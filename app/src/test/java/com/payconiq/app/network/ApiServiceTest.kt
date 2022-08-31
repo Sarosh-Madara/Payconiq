@@ -123,4 +123,6 @@ class ApiServiceTest {
         assertFalse(characters.items[0].id != 1410106)
         assertFalse(characters.items[0].type != "User")
     }
+
+
 }
