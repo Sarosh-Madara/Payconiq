@@ -20,8 +20,4 @@ class ExampleUnitTest {
         assertEquals(10,5+5)
     }
 
-    @Test
-    fun fivePlusSix_EqualsTen(){
-        assertEquals(10,5+6)
-    }
 }

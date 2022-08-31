@@ -24,5 +24,3 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - android/run-tests:
-          test-command: ./gradlew testDebug
