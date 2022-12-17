@@ -74,6 +74,7 @@ dependencies {
 
     //Retrofit interceptor Logging
     implementation "com.squareup.okhttp3:logging-interceptor:$versions.retrofit2.retrofitInterceptor"
+    testImplementation ("com.google.guava:guava-testlib:31.1-jre")
 
     // Dagger Hilt
     implementation "com.google.dagger:hilt-android:$versions.google.hiltVersion"
